@@ -30,7 +30,7 @@ while True:
   venus = chart.get(const.VENUS)
   mars = chart.get(const.MARS)
   jupiter = chart.get(const.JUPITER)
-  saturn = chart.get(const.SATURN)
+  saturn = chart.get(const.SATURN)  
 
   sol = 'sol '
   sol += str(sun.sign)
