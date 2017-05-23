@@ -1,4 +1,4 @@
-#N canvas 113 186 1068 813 10;
+#N canvas 111 186 1068 813 10;
 #N canvas 310 50 696 722 GUI 0;
 #X obj 121 136 g_nbx ratio1;
 #X obj 121 232 g_nbx D1;
@@ -113,6 +113,13 @@
 #X obj 323 310 random;
 #X obj 340 284 * 200;
 #X obj 323 332 + 350;
+#X obj 700 641 unpack s f f;
+#X obj 699 618 r jupiter;
+#X obj 699 746 s jupiter-note;
+#X obj 700 724 sign2note;
+#X obj 863 723 outlet;
+#X obj 922 721 outlet;
+#X obj 986 723 outlet;
 #X connect 0 0 3 0;
 #X connect 1 0 14 1;
 #X connect 2 0 0 0;
@@ -164,3 +171,9 @@
 #X connect 43 0 45 0;
 #X connect 44 0 43 1;
 #X connect 45 0 38 2;
+#X connect 46 0 49 0;
+#X connect 46 0 50 0;
+#X connect 46 1 51 0;
+#X connect 46 2 52 0;
+#X connect 47 0 46 0;
+#X connect 49 0 48 0;
