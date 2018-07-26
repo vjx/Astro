@@ -69,15 +69,15 @@
 #X obj 46 417 pack 0 0;
 #X msg 203 460 save;
 #X obj 478 -15 u_loadmeter;
-#X floatatom 107 556 5 0 0 0 - - -, f 5;
+#X floatatom 105 612 5 0 0 0 - - -, f 5;
 #X obj 137 512 u_cocollect;
-#X msg 175 608 index4 0 0 0.299213 0 \, index3 0 0.141732 0 0 \, index2
+#X msg 175 568 index4 0 0 0.299213 0 \, index3 0 0.141732 0 0 \, index2
 0.267717 0 0 0 \, index1 0 0 0 0 \, ratio2 0.5 \, ratio3 1.5 \, ratio4
 0.66666 \, ratio1 1 \, vol4 0 \, vol3 0 \, vol2 1 \, vol1 1 \, R4 59
 \, S4 0 \, D4 75 \, A4 93 \, R3 111 \, S3 0 \, D3 115 \, A3 9 \, R2
 564 \, S2 0 \, D2 200 \, A2 1 \, R1 741 \, S1 74 \, D1 117 \, A1 1
 \,;
-#X obj 175 696 s \$0-GUI;
+#X obj 175 656 s \$0-GUI;
 #X obj 203 487 t a b;
 #X obj 46 491 s_fm4 MYFM$;
 #X obj 51 78 r tick;
@@ -92,35 +92,53 @@
 #X obj 162 60 t f f;
 #X obj 201 206 * 100;
 #X obj 241 122 pow 2;
-#X obj 266 260 * 127;
-#X obj 266 282 t b f;
-#X obj 236 324 random 127;
+#X obj 260 220 * 127;
+#X obj 260 242 t b f;
+#X obj 230 284 random 127;
 #X obj 241 144 t f f f;
 #X obj 65 336 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 33 604 e_chorusr XX;
-#X obj 30 680 throw~ out-L;
-#X obj 54 640 throw~ out-R;
-#X obj 194 571 loadbang;
+#X obj 44 634 e_chorusr XX;
+#X obj 43 680 throw~ out-L;
+#X obj 65 662 throw~ out-R;
+#X obj 194 531 loadbang;
 #X obj 49 388 makenote 80 300;
 #X obj 383 196 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 4263 1;
-#X obj 47 559 *~ 0.7;
+-1 -1 2053 1;
+#X obj 45 615 *~ 0.7;
 #X obj 323 258 t b f;
 #X obj 323 310 random;
 #X obj 340 284 * 200;
 #X obj 323 332 + 100;
 #X obj 679 556 r lua;
-#X obj 563 753 s lua-note;
+#X obj 410 756 s lua-note;
 #X obj 679 586 unpack s f f f;
 #X obj 663 697 outlet sign;
 #X obj 755 694 outlet sing longitude;
 #X obj 931 692 outlet longitude;
 #X obj 1068 690 outlet essential;
-#X obj 563 729 sign2note;
+#X obj 563 659 sign2note;
 #X obj 88 134 euclid4 1 9 15;
 #X obj 162 37 degree-format;
 #X obj 194 90 / 30;
+#X floatatom 323 398 5 0 0 0 - - -, f 5;
+#X obj 308 365 f;
+#X obj 132 326 t f b b;
+#X obj 314 458 s lua-note-duration;
+#X obj 136 367 r lua-note-duration;
+#X obj 944 434 cos;
+#X floatatom 941 486 5 0 0 0 - - -, f 5;
+#X obj 986 217 vsl 15 128 0 360 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 12700 1;
+#X floatatom 1037 317 5 0 0 0 - - -, f 5;
+#X obj 840 454 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 904 241 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 12700 1;
+#X floatatom 865 368 5 0 0 0 - - -, f 5;
+#X obj 984 376 / 360;
+#X obj 358 681 r lua;
+#X obj 420 721 horizonte;
 #X connect 0 0 3 0;
 #X connect 1 0 13 1;
 #X connect 2 0 0 0;
@@ -144,6 +162,7 @@
 #X connect 20 1 19 0;
 #X connect 21 0 30 0;
 #X connect 21 0 35 0;
+#X connect 21 0 55 0;
 #X connect 22 0 21 1;
 #X connect 23 0 50 1;
 #X connect 23 1 52 0;
@@ -167,14 +186,27 @@
 #X connect 38 1 40 0;
 #X connect 39 0 41 0;
 #X connect 40 0 39 1;
-#X connect 41 0 35 2;
+#X connect 41 0 54 1;
 #X connect 42 0 44 0;
 #X connect 44 0 45 0;
 #X connect 44 0 49 0;
 #X connect 44 1 46 0;
 #X connect 44 2 47 0;
 #X connect 44 3 48 0;
-#X connect 49 0 43 0;
+#X connect 49 0 67 1;
 #X connect 50 0 17 0;
 #X connect 51 0 23 0;
 #X connect 52 0 25 0;
+#X connect 54 0 53 0;
+#X connect 54 0 56 0;
+#X connect 55 2 54 0;
+#X connect 57 0 35 2;
+#X connect 58 0 59 0;
+#X connect 58 0 62 0;
+#X connect 60 0 65 0;
+#X connect 61 0 65 0;
+#X connect 63 0 58 0;
+#X connect 64 0 58 0;
+#X connect 65 0 58 0;
+#X connect 66 0 67 0;
+#X connect 67 0 43 0;

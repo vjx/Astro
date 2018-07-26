@@ -116,10 +116,11 @@
 #X obj 863 723 outlet;
 #X obj 922 721 outlet;
 #X obj 986 723 outlet;
-#X obj 700 724 sign2note;
+#X obj 700 684 sign2note;
 #X obj 89 134 euclid4 1 4 15;
 #X obj 162 38 degree-format;
 #X obj 194 90 / 30;
+#X obj 582 680 horizonte;
 #X connect 0 0 3 0;
 #X connect 1 0 14 1;
 #X connect 2 0 0 0;
@@ -173,7 +174,9 @@
 #X connect 43 1 47 0;
 #X connect 43 2 48 0;
 #X connect 44 0 43 0;
-#X connect 49 0 45 0;
+#X connect 44 0 53 0;
+#X connect 49 0 53 1;
 #X connect 50 0 16 0;
 #X connect 51 0 22 0;
 #X connect 52 0 25 0;
+#X connect 53 0 45 0;

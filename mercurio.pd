@@ -111,7 +111,7 @@
 #X obj 323 332 + 200;
 #X obj 721 526 unpack s f f;
 #X obj 720 503 r mercurio;
-#X obj 721 653 s mercurio-note;
+#X obj 714 664 s mercurio-note;
 #X obj 853 614 outlet;
 #X obj 911 612 outlet;
 #X obj 971 613 outlet;
@@ -119,6 +119,8 @@
 #X obj 88 134 euclid4 1 8 15;
 #X obj 162 30 degree-format;
 #X obj 194 90 / 30;
+#X obj 641 579 r mercurio;
+#X obj 641 600 horizonte;
 #X connect 0 0 3 0;
 #X connect 1 0 13 1;
 #X connect 2 0 0 0;
@@ -171,7 +173,9 @@
 #X connect 42 1 46 0;
 #X connect 42 2 47 0;
 #X connect 43 0 42 0;
-#X connect 48 0 44 0;
+#X connect 48 0 53 1;
 #X connect 49 0 15 0;
 #X connect 50 0 35 0;
 #X connect 51 0 23 0;
+#X connect 52 0 53 0;
+#X connect 53 0 44 0;

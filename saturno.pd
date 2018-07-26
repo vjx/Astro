@@ -114,12 +114,13 @@
 #X obj 975 719 outlet;
 #X obj 864 719 outlet;
 #X obj 738 611 unpack s f f;
-#X obj 738 588 r saturno;
+#X obj 738 568 r saturno;
 #X obj 737 716 s saturno-note;
-#X obj 738 694 sign2note;
+#X obj 738 664 sign2note;
 #X obj 89 134 euclid4 1 3 15;
 #X obj 168 36 degree-format;
 #X obj 194 90 / 30;
+#X obj 615 648 horizonte;
 #X connect 0 0 3 0;
 #X connect 1 0 14 1;
 #X connect 2 0 0 0;
@@ -172,8 +173,9 @@
 #X connect 46 0 49 0;
 #X connect 46 1 43 0;
 #X connect 46 2 44 0;
-#X connect 47 0 46 0;
-#X connect 49 0 48 0;
+#X connect 47 0 53 0;
+#X connect 49 0 53 1;
 #X connect 50 0 16 0;
 #X connect 51 0 36 0;
 #X connect 52 0 24 0;
+#X connect 53 0 48 0;
