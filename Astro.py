@@ -31,6 +31,7 @@ while True:
   mars = chart.get(const.MARS)
   jupiter = chart.get(const.JUPITER)
   saturn = chart.get(const.SATURN)  
+  house1 = chart.get(const.HOUSE1)
 
   sol = 'sol '
   sol += str(sun.sign)
@@ -95,6 +96,14 @@ while True:
   saturno += ';'
   s.send(saturno.encode())
 
+  casa1 = 'casa1 '
+  casa1 += str(house1.sign)
+  casa1 += ' '
+  casa1 += str(house1.signlon)
+  casa1 += ' '
+  casa1 += str(house1.lon)
+  casa1 += ';'
+  s.send(casa1.encode())
 
 
   
