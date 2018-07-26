@@ -107,7 +107,7 @@
 #X obj 323 332 + 400;
 #X text 242 89 degree % from 0 to 1;
 #X obj 394 203 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 9993 1;
+-1 -1 9950 1;
 #X obj 714 491 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
 #X obj 162 37 degree-format;
@@ -123,6 +123,7 @@
 #X obj 194 90 / 30;
 #X obj 182 846 r sol;
 #X obj 182 867 horizonte;
+#X obj 11 816 outlet;
 #X connect 0 0 3 0;
 #X connect 1 0 13 1;
 #X connect 2 0 0 0;
@@ -144,6 +145,7 @@
 #X connect 18 0 19 0;
 #X connect 18 1 17 0;
 #X connect 19 0 34 0;
+#X connect 19 0 55 0;
 #X connect 20 0 19 1;
 #X connect 21 0 51 1;
 #X connect 21 1 52 0;

@@ -25,9 +25,11 @@
 #X msg 591 235 80.6823;
 #X obj 146 107 sel Aries Taurus Gemini Cancer Virgo Leo Libra Scorpio
 Sagittarius Capricorn Aquarius Pisces;
-#X obj 382 712 outlet;
+#X obj 382 752 outlet;
 #X obj 384 670 +;
 #X obj 410 639 r transpose;
+#X obj 384 711 +;
+#X obj 406 692 r transpose-Asc;
 #X connect 0 0 1 0;
 #X connect 0 0 24 0;
 #X connect 3 0 2 0;
@@ -63,5 +65,7 @@ Sagittarius Capricorn Aquarius Pisces;
 #X connect 24 10 19 0;
 #X connect 24 11 21 0;
 #X connect 24 12 23 0;
-#X connect 26 0 25 0;
+#X connect 26 0 28 0;
 #X connect 27 0 26 1;
+#X connect 28 0 25 0;
+#X connect 29 0 28 1;
